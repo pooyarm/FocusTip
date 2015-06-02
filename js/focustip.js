@@ -115,7 +115,7 @@ var FocusTip = function(opt){
 		var target = this.options.target.offset().top - 200;
 		if(target < 0) target = 0;
 		var $d = new $.Deferred();
-		$(window).animate({
+		$('body,html').animate({
 				scrollTop: target
 			}, 200, 'swing', function(){
 				$d.resolve();
