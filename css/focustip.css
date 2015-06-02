@@ -1,0 +1,97 @@
+body.focusTipfix{
+	overflow: hidden!important;
+}
+.focusTip{
+	box-sizing: content-box;
+	display: none;
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	z-index: 999;
+	top: 100px;
+	left: 300px;
+	background: transparent;
+	border: solid 2px #FFF;
+	box-shadow: inset 0 2px 16px rgba(0,0,0,.3);
+}
+.focusTip > div{
+	box-sizing: content-box;
+	color: #FFF;
+	font-size: 25px;
+	position: absolute;
+	top: 115px;
+	left: 30px;
+	width: 400px;
+	line-height: 1.15em;
+}
+.focusTip.on-right > div{
+	left: auto;
+	right: 30px;
+}
+.focusTip.on-center > div{
+	left: 0;
+}
+.focusTip > div > p{
+	color: inherit;
+	font-size: inherit;
+	line-height: 1.15em;
+	margin-top: 0;
+}
+.focusTip > div > .ok{
+	box-sizing: content-box;
+	display: inline-block;
+	background: rgba(255,255,255,0.15);
+	text-transform: uppercase;
+	letter-spacing: -0.5px;
+	padding: 10px 15px;
+	float: right;
+	text-decoration: none;
+	color: inherit;
+	font-size: 20px;
+	font-weight: bold;
+
+    -webkit-transition: all 0.3s ease;                  
+    -moz-transition: all 0.3s ease;                 
+    -o-transition: all 0.3s ease;   
+    -ms-transition: all 0.3s ease;          
+    transition: all 0.3s ease;
+}
+.focusTip > div > .ok:hover{
+	background: rgba(255,255,255,0.25);
+	opacity: 1;
+	text-decoration: none;
+}
+.focusTip.on-right > div > .ok{
+	float: left;
+}
+.focusTip:before{
+	box-sizing: content-box;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 104px;
+	height: 104px;
+	margin-top: -5002px;
+	margin-left: -5002px;
+	border-radius: 50%;
+	border: solid 5000px rgba(0,175,230,0.8);
+}
+
+@media only screen and (max-width: 700px) { 
+	.focusTip > div{
+		font-size: 18px;
+		width: 300px;
+		left: 0;
+	}
+	.focusTip.on-right > div{
+		right: 0;
+	}
+	.focusTip > div > .ok{
+		font-size: 18px;
+	}
+}
