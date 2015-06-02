@@ -114,7 +114,6 @@ var FocusTip = function(opt){
 	this.initScroll = function(){
 		var target = this.options.target.offset().top - 200;
 		if(target < 0) target = 0;
-		console.log(target);
 		var $d = new $.Deferred();
 		$(window).animate({
 				scrollTop: target
