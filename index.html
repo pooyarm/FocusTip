@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <link rel="stylesheet" href="stylesheets/focustip.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,7 +18,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Focustip</h1>
+        <h1 id='project-title'>Focustip</h1>
         <p>explain your website with FocusTip</p>
 
         <p class="view"><a href="https://github.com/pooyarm/FocusTip">View the Project on GitHub <small>pooyarm/FocusTip</small></a></p>
@@ -66,6 +69,39 @@ $ git checkout gh-pages
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script src="javascripts/focustip.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var z = new FocusTip({
+                target: $("#project-title"),
+                color: '#44B85D',
+                callback: function(){
+                  var z2 = new FocusTip({
+                          target: $("#target").next(),
+                          callback: function(){
+                            var z3 = new FocusTip({
+                                    target: $("#options > span"),
+                                    callback: function(){
+                                      var z3 = new FocusTip({
+                                              target: $("#how-to-use"),
+                                              callback: function(){
+                                              },
+                                              text: 'Lorem ipsum dolor sit amet.<br/>consectetur adipiscing elit.'
+                                            });
+
+                                    },
+                                    text: 'Lorem ipsum dolor sit amet.<br/>consectetur adipiscing elit.'
+                                  });
+                          },
+                          text: 'Lorem ipsum dolor sit amet.'
+                        });
+                },
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              });
+      });
+    </script>
     
   </body>
 </html>
