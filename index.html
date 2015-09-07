@@ -24,8 +24,8 @@
 
         <ul>
           <li id='download-link'><a href="http://codecanyon.net/item/focustip/12787895">Buy from <strong>CodeCanyon</strong></a></li>
-          
-          <li id='issues-link'><a href="https://github.com/pooyarm/FocusTip/issues">Any bug? <strong>Tell me</strong></a></li>
+          <li id='issues-link'><a hresf="http://codecanyon.net/item/focustip/12787895/support">Any bug? <strong>Tell me</strong></a></li>
+          <li id='website-link'><a href="https://1pooya.com">Find me <strong>Website</strong></a></li>
         </ul>
       </header>
       <section>
@@ -97,7 +97,7 @@ After that, you need to create an instance of Focustip object and pass the <a hr
 
 <h3><a id="support" class="anchor" href="#support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support</h3>
 
-<p>Having trouble with Focustip? Check out the issues page at <a href="https://github.com/pooyarm/FocusTip/issues" target='_blank'>https://github.com/pooyarm/FocusTip/issues</a> or <a href='https://github.com/pooyarm/FocusTip/issues/new' target='_blank'>create a new issue</a>.</p>
+<p>Having trouble with Focustip? need support? I'm here <a href="http://codecanyon.net/item/focustip/12787895/support" target='_blank'>http://codecanyon.net/item/focustip/12787895/support</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/pooyarm" target='_blank'>pooyarm</a></p>
@@ -123,17 +123,19 @@ After that, you need to create an instance of Focustip object and pass the <a hr
                   ok: 'ok',
                   text: 'Buy and download Focustip files via this link.',
                   callback: function(){
+                    // website-link
                     new FocusTip({
-                      target: $("#github-link"),
+                      target: $("#issues-link"),
                       color: '#ed7a00',
-                      text: 'or you can see Focustip on github.',
+                      text: 'Having trouble with Focustip? Support is available...',
                       callback: function(){
                         new FocusTip({
-                                target: $("#issues-link"),
+                                target: $("#website-link"),
                                 color: '#000',
+                                ok: 'ok',
                                 callback: function(){
                                 },
-                                text: 'Having trouble with Focustip? Create a new issue...'
+                                text: 'also find me on my website :)'
                               });
 
                       }
