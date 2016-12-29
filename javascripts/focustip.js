@@ -7,6 +7,7 @@
  * https://github.com/pooyarm
  */
 var FocusTip = function(opt){
+	"use strict";
 	this.options = {
 		color: '#008dbc',
 		target: '',
