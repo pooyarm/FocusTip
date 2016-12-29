@@ -7,6 +7,7 @@
  * https://github.com/pooyarm
  */
 var FocusTip = function(opt){
+	"use strict";
 	this.options = {
 		color: '#008dbc',
 		target: '',
@@ -105,7 +106,7 @@ var FocusTip = function(opt){
 
 		var style = document.createElement("style");
 		document.head.appendChild(style);
-		sheet = style.sheet
+		var sheet = style.sheet
 		sheet.insertRule('.focusTip.'+this.uniqueClass+':before{ border-color: rgba('+color.r+','+color.g+','+color.b+',0.8); }', 0);
 
 		this.el.children('div').css('color',this.options.textColor);
